@@ -3,12 +3,12 @@
 ## Chapter 1: Project Introduction
 
 #### 1. Objective:
-The goal of this project is to generate butterfly images using different GAN methods. Two high-level libraries, fastai and torchgan, both built on PyTorch, are utilized. The fastai library employs the WGAN algorithm from the GAN family, while torchgan utilizes DCGAN. By training models with different libraries, we can evaluate their performance.
+The goal of this project is to generate butterfly images using different GAN methods. Two high-level libraries, Fastai, and Torchgan, both built on PyTorch, are utilized. The Fastai library employs the WGAN algorithm from the GAN family, while Torchgan utilizes DCGAN. By training models with different libraries, we can evaluate their performance.
 
 #### 2. Algorithm References:
 
-For fastai, refer to the official API documentation at: https://docs.fast.ai/vision.gan.html
-For torchgan, refer to the official API documentation at: https://torchgan.readthedocs.io/en/latest/
+For Fastai, refer to the official API documentation at: https://docs.fast.ai/vision.gan.html
+For Torchgan, refer to the official API documentation at: https://torchgan.readthedocs.io/en/latest/
 
 #### 3. Dataset Source:
 The dataset used for this project is obtained from Kaggle: https://www.kaggle.com/datasets/leerocky/butterfly
@@ -16,13 +16,13 @@ The dataset used for this project is obtained from Kaggle: https://www.kaggle.co
 #### 4. Model Evaluation Method:
 The Fréchet Inception Distance (FID) is used for model evaluation. More information about FID can be found at: https://torch-fidelity.readthedocs.io/en/latest/usage_api.html
 
-## Chapter 2: Generating Images with fastai
+## Chapter 2: Generating Images with Fastai
 
 #### 1. Library Import:
-Import the necessary libraries, including fastai and other related dependencies.
+Import the necessary libraries, including Fastai and other related dependencies.
 
 #### 2. Dataset Import:
-Use the methods provided by fastai to import the images.
+Use the methods provided by Fastai to import the images.
 
 #### 3. Image Visualization:
 Randomly display nine existing butterfly images.
@@ -31,7 +31,7 @@ Randomly display nine existing butterfly images.
 Define the WGAN model based on the API documentation.
 
 #### 5. Model Training:
-Adjust the learning rate and number of training iterations. In this case, increasing the number of iterations to 400 and further lowering the learning rate is necessary to generate high-quality butterfly images.
+Adjust the learning rate and the number of training iterations. In this case, increasing the number of iterations to 400 and further lowering the learning rate is necessary to generate high-quality butterfly images.
 
 #### 6. Training Results:
 After 400 iterations of training, the generator and discriminator losses have reached a very low level. Continuing the training with more iterations should lead to better results.
@@ -48,33 +48,33 @@ Package the images into a .tgz file for convenient downloading and future use.
 #### Summary
 The model definition and training in this section mostly follow the official API documentation. However, improvements have been made to the training iterations and loss rates. The image generation and packaging parts have been adjusted based on various blog references.
 
-## Chapter 3: Generating Images with torchgan
+## Chapter 3: Generating Images with Torchgan
 
 #### 1. Library Installation:
 Install the torchgan module on Kaggle using the command "pip install torchgan".
 
 #### 2. Library Import:
-Import the necessary libraries, including torchgan and other related dependencies.
+Import the necessary libraries, including Torchgan and other related dependencies.
 
 #### 3. Dataset Import:
-For this section, the official example dataset in torchgan, CIFAR10, is not suitable. Various attempts were made to import the dataset, including using the DataBlock approach from fastai, but compatibility issues were encountered.
+For this section, the official example dataset in Torchgan, CIFAR10, is not suitable. Various attempts were made to import the dataset, including using the DataBlock approach from Fastai, but compatibility issues were encountered.
 
-· First Attempt: Importing images using the DataBlock approach from fastai was successful, but the resulting data type did not match the requirements of torchgan.
+· First Attempt: Importing images using the DataBlock approach from Fastai was successful, but the resulting data type did not match the requirements of Torchgan.
 · Second Attempt: Attempted to rewrite the import function based on online resources but was unsuccessful.
 · Multiple attempts were made, but the details are omitted for brevity.
-· Nth Attempt: Discovered the ImageFolder method in torchvision.datasets, which allowed importing the dataset images and performing the training process successfully. Reference blog: https://blog.csdn.net/weixin_43135178/article/details/115139178
+· Nth Attempt: Discovered the ImageFolder method in Torchvision. Datasets, which allowed importing the dataset images and performing the training process successfully. Reference blog: https://blog.csdn.net/weixin_43135178/article/details/115139178
 
 #### 4. Model Definition and Training:
 Follow the API documentation to define and train the model. The number of training iterations is also set to 400, consistent with the previous method. In order to suppress excessive printing during training, the %%capture magic command is used. Reference: https://www.zhihu.com/question/264396121
 
 #### 5. Results Visualization:
-During the training process, torchgan generates a set of images at each iteration. Matplotlib is used to compare the original images with the generated images.
+During the training process, Torchgan generates a set of images at each iteration. Matplotlib is used to compare the original images with the generated images.
 
 #### 6. Image Generation:
-Generate 128 butterfly images using the generator (similar to the fastai method).
+Generate 128 butterfly images using the generator (similar to the Fastai method).
 
 #### 7. Image Packaging:
-Package the images into a .tgz file, following a similar approach to the fastai method, for easy downloading and future use.
+Package the images into a .tgz file, following a similar approach to the Fastai method, for easy downloading and future use.
 
 #### Summary:
 The model definition and training in this section mostly follow the official API documentation. The number of training iterations matches the previous method. Difficulties were encountered in importing the dataset and visualizing images, but they were eventually overcome. The image generation and packaging process is similar to the previous method.
@@ -97,6 +97,14 @@ The model definition and training in this section mostly follow the official API
 
 #### 8. The problem was solved and the two generated images were scored.
 
-#### 9. Finally, the problem is resolved, and the FID scores for the two models' generated images are calculated. The FID scores for fastai's WGAN model and torchgan's DCGAN model are 165 and 212, respectively. Therefore, the images generated by fastai's WGAN model have a higher similarity.
+#### 9. Finally, the problem is resolved, and the FID scores for the two models' generated images are calculated. The FID scores for Fastai's WGAN model and Torchgan's DCGAN model are 165 and 212, respectively. Therefore, the images generated by Fastai's WGAN model have a higher similarity.
 
 Note: The code was messy during the evaluation process, but it was cleaned up afterward.
+
+## Summary:
+This ML project is somewhat complex and challenging. In this project, I need to deal with concepts and algorithms related to image generation and generative adversarial networks (GAN). It also involves using different deep-learning libraries and tools, such as Fastai and Torchgan, and learning how to tune the hyperparameters of the model to get better results. Also, dealing with datasets, model training, and evaluation requires some skills and experience.
+
+For me, this project has some challenges. But by learning and practicing problem-solving. Although there may be some difficulties, it is also an opportunity to learn and grow. I spent a lot of time reviewing documentation, tutorials, and sample code, as well as using online communities and forums to seek help when I was confused and encountered many difficulties in the project. I kept learning and practicing and managed to overcome the challenges and make progress.
+
+#### Chatgpt application part: 
+In addition to the traditional learning method, I relied on Chatgpt to modify some code bugs. Chatgpt recommended me relevant documents for learning and introduction in the early stage of the project.
