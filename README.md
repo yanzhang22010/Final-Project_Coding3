@@ -1,4 +1,4 @@
-# Final-Project_Coding3
+# Final-Project_Butterfly image generation project
 
 ## Video Link: https://youtu.be/Ef8Nfz6zlXQ
 
