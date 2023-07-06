@@ -1,5 +1,7 @@
 # Final-Project_Coding3
 
+## Video Link: https://youtu.be/Ef8Nfz6zlXQ
+
 ## Chapter 1: Project Introduction
 
 #### 1. Objective:
